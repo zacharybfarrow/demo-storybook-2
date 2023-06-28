@@ -13,16 +13,16 @@ import {
 } from '@radix-ui/react-icons'
 
 export type IconName =
-  | 'ArrowBottomLeft'
-  | 'ArrowBottomRight'
-  | 'ArrowDown'
-  | 'ArrowLeft'
-  | 'ArrowRight'
-  | 'ArrowTopLeft'
-  | 'ArrowTopRight'
-  | 'ArrowUp'
-  | 'InfoCircled'
-  | 'Avatar'
+  | 'ARROWBOTTOMLEFT'
+  | 'ARROWBOTTOMRIGHT'
+  | 'ARROWDOWN'
+  | 'ARROWLEFT'
+  | 'ARROWRIGHT'
+  | 'ARROWTOPLEFT'
+  | 'ARROWTOPRIGHT'
+  | 'ARROWUP'
+  | 'INFOCIRCLED'
+  | 'AVATAR'
 
 
 export default function Icon<T extends IconProps>({
@@ -31,16 +31,16 @@ export default function Icon<T extends IconProps>({
 }: { name: IconName } & T) {
   if (!name) return null
   const iconLookup = {
-    ArrowBottomLeft: <ArrowBottomLeftIcon {...props} />,
-    ArrowBottomRight: <ArrowBottomRightIcon {...props} />,
-    ArrowDown: <ArrowDownIcon {...props} />,
-    ArrowLeft: <ArrowLeftIcon {...props} />,
-    ArrowRight: <ArrowRightIcon {...props} />,
-    ArrowTopLeft: <ArrowTopLeftIcon {...props} />,
-    ArrowTopRight: <ArrowTopRightIcon {...props} />,
-    ArrowUp: <ArrowUpIcon {...props} />,
-    InfoCircled: <InfoCircledIcon {...props} />,
-    Avatar: <AvatarIcon {...props} />,
+    ARROWBOTTOMLEFT: <ArrowBottomLeftIcon {...props} />,
+    ARROWBOTTOMRIGHT: <ArrowBottomRightIcon {...props} />,
+    ARROWDOWN: <ArrowDownIcon {...props} />,
+    ARROWLEFT: <ArrowLeftIcon {...props} />,
+    ARROWRIGHT: <ArrowRightIcon {...props} />,
+    ARROWTOPLEFT: <ArrowTopLeftIcon {...props} />,
+    ARROWTOPRIGHT: <ArrowTopRightIcon {...props} />,
+    ARROWUP: <ArrowUpIcon {...props} />,
+    INFOCIRCLED: <InfoCircledIcon {...props} />,
+    AVATAR: <AvatarIcon {...props} />,
   }
   return iconLookup[name] ?? null
 }
