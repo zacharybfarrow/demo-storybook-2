@@ -112,6 +112,7 @@ const Button = React.forwardRef(function Button<T extends React.ElementType>(
     uppercase ? "uppercase" : "",
     className,
   ]);
+  
   const commonProps = { tabIndex, className: buttonClassName, ref };
   const anchorProps = { href };
 
