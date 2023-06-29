@@ -61,6 +61,13 @@ export const Solid: Story = {
     onClick: action("onClick"),
     children: "Button",
   },
+  decorators: [
+    (Story) => (
+      <div className="my-8 px-8">
+        <Story />
+      </div>
+    )
+  ]
 };
 
 export const Outline: Story = {
@@ -70,6 +77,13 @@ export const Outline: Story = {
     onClick: action("onClick"),
     children: "Button",
   },
+  decorators: [
+    (Story) => (
+      <div className="my-8 px-8">
+        <Story />
+      </div>
+    )
+  ]
 };
 
 export const Ghost: Story = {
@@ -79,6 +93,13 @@ export const Ghost: Story = {
     onClick: action("onClick"),
     children: "Button",
   },
+  decorators: [
+    (Story) => (
+      <div className="my-8 px-8">
+        <Story />
+      </div>
+    )
+  ]
 };
 
 export const Tinted: Story = {
@@ -88,4 +109,11 @@ export const Tinted: Story = {
     onClick: action("onClick"),
     children: "Button",
   },
+  decorators: [
+    (Story) => (
+      <div className="my-8 px-8">
+        <Story />
+      </div>
+    )
+  ]
 };

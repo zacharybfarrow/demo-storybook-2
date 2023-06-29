@@ -99,8 +99,6 @@ export enum ButtonTheme {
   "WARNING-GHOST" = "border-transparent bg-transparent text-orange-600 hover:bg-orange-300 active:bg-orange-800",
 }
 
-export type BUTTON_THEME_KEY = keyof typeof ButtonTheme;
-
 export interface ButtonAdditionalProps {
   /**
    * Specifies the message provided to screen readers when the danger button variant is selected
