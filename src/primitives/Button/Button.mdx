@@ -1,0 +1,129 @@
+import {
+  Story,
+  Canvas,
+  Unstyled,
+  Controls,
+  ArgTypes,
+  Meta,
+} from "@storybook/blocks";
+import * as ButtonStories from "./Button.stories";
+
+# Button
+
+## Overview
+
+The `Button` is a versatile and interactive component that is an integral part of user interfaces. It serves as a clickable element
+that enables users to trigger actions, navigate through different sections or screens, and interact with the system. The `Button` provides
+a visually recognizable and intuitive means for users to engage with the application's functionality.
+
+## Best Practices
+
+_**Consider the following best practices when using the `Button` in your application:**_
+
+- **Clear Labeling:** Make sure the button labels accurately describe the associated action or operation.
+- **Placement:** Position buttons where users expect to find them based on common design patterns and user experience guidelines.
+- **Visual Hierarchy:** visual cues, such as color, size, and positioning, to establish a clear visual hierarchy that distinguishes primary from secondary actions.
+- **Maintain consistency:** Use a consistent visual style for buttons across your application to provide a cohesive user experience.
+- **Accessibility:** Verify that the button Element is accessible to users with disabilities by adhering to accessibility standards.
+
+## Common Use Cases:
+
+_**The following are some common cases for the `Button`**_
+
+- **Form Submissions:** buttons are often used to submit form data, validating and processing user inputs.
+- **Navigation:** buttons can serve as navigation elements, allowing users to move between different sections, pages, or screens of an application.
+- **Modal Interactions:** buttons are commonly used within modal windows or dialogs to confirm or cancel actions.
+- **Call-to-Action:** buttons can be strategically placed to encourage users to take specific actions, such as making a purchase, signing up, or downloads.
+- **Menu Items:** buttons can be utilized as menu items, enabling users to select options from a dropdown or expandable menu.
+
+## Anatomy
+
+_**A `Button` consists of the following key elements:**_
+
+- Responds to user input, allowing users to interact with it by clicking or tapping on it.
+- When clicked, the Button initiates a specific action, such as submitting a form, saving data, or opening a dialog or modal window.
+- The button provides visual feedback to users to indicate its current state by changing appearance when hovered over, pressed, or displaying as disabled.
+- A clear and concise label that describes the action or purpose of the Button. The label can be in the form of text, icons, or a combination of both.
+- The Button element can be styled and customized to match the overall visual design and branding.
+- Designed to be accessible, ensuring that it can be used by individuals with disabilities.
+
+<Meta of={ButtonStories} />
+<ArgTypes of={ButtonStories} />
+
+## Button | Kind
+
+**Specifies the `kind` of button element that is rendered**
+
+- `"SOLID"` - A button with a fully opaque background color without any transparency.
+- `"OUTLINE"` - A button with a transparent background, visible border, and a lightly shaded background when hovered.
+- `"TINTED"` - A button with a background color that is slightly transparent, creating a tinted effect.
+- `"GHOST"` - A button with a transparent background without any visible borders, colored text, and reveals a lightly shaded background when hovered.
+
+<Canvas>
+  <Story of={ButtonStories.Kinds} />
+</Canvas>
+
+## Button | Variant
+
+**Specifies the color scheme `variant` of button element that is rendered**
+
+- `"ACTION"` - A bright blue color strategically placed to encourage users to take specific actions
+- `"PRIMARY"` - A neutral color to signify a secondary action to the specific action.
+- `"DANGER"` - A state based red color, indicates risky actions, use with caution.
+- `"SUCCESS"` - A state based green color, Represents successful outcomes or completion.
+- `"WARNING"` - A state based orange color, Alerts to potential issues or cautions.
+
+<Canvas>
+  <Story of={ButtonStories.Variants} />
+</Canvas>
+
+## Button | Size
+
+**Specifies the height `size` of the button element that is rendered, the button width is set to `fit`. Choose the fullWidth option to set the button width to expand to the full width of the parent container**
+
+- `"XSMALL"` - renders a Button with `height: 2.5rem; font-size: 0.875rem; padding-inline: 1rem; gap: 1rem;`
+- `"SMALL"` - renders a Button with `height: 3rem; font-size: 1rem; padding-inline: 1.5rem; gap: 1.5rem;`
+- `"MEDIUM"` - renders a Button with `height: 3.5rem; font-size: 1.125rem; padding-inline: 2rem; gap: 2rem;`
+- `"LARGE"` - renders a Button with `height: 4rem; font-size: 1.25rem; padding-inline: 2.5rem; gap: 2.5rem;`
+- `"XLARGE"` - renders a Button with `height: 4.5rem; font-size: 1.5rem; padding-inline: 3rem; gap: 3rem;`
+
+<Canvas>
+  <Story of={ButtonStories.Sizes} />
+</Canvas>
+
+## Button | Rounded
+
+**Specifies the height `size` of the Button element that is rendered, the Button width is set to `fit`. Choose the fullWidth option to set the Button width to expand to the full width of the parent container**
+
+- `"SQUARE"` - renders a squared border with a value of `border-radius: 0px;`
+- `"SMALL"` - renders a round border with a value of `border-radius: 0.375rem;`
+- `"MEDIUM"` - renders a round border with a value of `border-radius: 0.5rem;`
+- `"LARGE"` - renders a round border with a value of `border-radius: 0.75rem;`
+- `"XLARGE"` - renders a round border with a value of `border-radius: 1rem;`
+- `"CIRCLE"` - renders a round border with a value of `border-radius: 9999px;`
+
+<Canvas>
+  <Story of={ButtonStories.Rounded} />
+</Canvas>
+
+## Button | Icon
+
+**Specifies the `icon` element rendered with button, Selecting this will include the children element(s)**
+
+<Canvas>
+  <Story of={ButtonStories.IconVariants} />
+</Canvas>
+
+## Button | Icon Only
+
+**Specifies if the button should render a `isIconOnly` only Selecting this will not include the children element(s) and must have selected an `icon`**
+
+<Canvas>
+  <Story of={ButtonStories.IconOnlyVariants} />
+</Canvas>
+
+## Conclusion
+
+In conclusion, the `Button` element is a crucial component in user interfaces, allowing users to interact
+with applications, trigger actions, and navigate through different sections. By following best practices and
+considering usability and accessibility, developers can create intuitive and engaging user experiences with the `Button` element.

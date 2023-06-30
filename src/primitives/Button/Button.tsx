@@ -8,6 +8,7 @@ import {
   ButtonSize,
   ButtonTheme,
   ButtonVariant,
+  IconButtonSize,
   PolymorphicProps,
 } from "../types/common";
 
@@ -78,7 +79,7 @@ const Button = React.forwardRef(function Button<T extends React.ElementType>(
     href,
     iconLabel,
     icon,
-    isIconOnly,
+    isIconOnly = false,
     kind = "SOLID",
     onBlur,
     onClick,
@@ -98,21 +99,25 @@ const Button = React.forwardRef(function Button<T extends React.ElementType>(
   const buttonClassName = cx([
     "inline-flex",
     "items-center",
-    "justify-center",
     "outline-2",
     "border-2",
     "font-med",
     "transition-all",
     "outline-transparent",
     "focus:outline-blue-500",
-    ButtonRadius[rounded],
-    ButtonTheme[`${variant}-${kind}`],
-    ButtonSize[size],
+    "disabled:bg-zinc-500",
+    "disabled:text-zinc-800",
+    "disabled:border-zinc-800",
     fullWidth && "w-full",
     uppercase ? "uppercase" : "",
+    isIconOnly && IconButtonSize[size],
+    !isIconOnly && icon ? "justify-between" : "justify-center",
+    !isIconOnly && ButtonSize[size],
+    ButtonTheme[`${variant}-${kind}`],
+    ButtonRadius[rounded],
     className,
   ]);
-  
+
   const commonProps = { tabIndex, className: buttonClassName, ref };
   const anchorProps = { href };
 
@@ -158,13 +163,9 @@ const Button = React.forwardRef(function Button<T extends React.ElementType>(
       ...commonProps,
       ...additionalProps,
     },
-    children,
+    !isIconOnly && children,
     ButtonIconElement
   );
-
-  if (isIconOnly && icon) {
-    return <>{ButtonIconElement}</>;
-  }
   return Button;
 });
 
