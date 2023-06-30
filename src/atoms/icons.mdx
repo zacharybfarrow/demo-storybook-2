@@ -1,0 +1,16 @@
+import { Meta, IconGallery, IconItem } from "@storybook/blocks";
+import { icons } from "../atoms/atoms.tsx";
+
+<Meta title="Atoms/Icons" />
+
+# Icons
+
+<IconGallery>
+  {icons.map((icon) => {
+    return (
+        <IconItem key={icon.title} name={icon.name}>
+            {icon.element}
+        </IconItem>
+    )
+  })}
+</IconGallery>

@@ -1,14 +1,10 @@
-import { type Meta, type StoryObj } from "@storybook/react";
+import { type StoryObj } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import Button from "./Button";
-import { ButtonVariant } from "../types/common";
-
-// import { expect } from '@storybook/jest';
 
 const meta = {
   title: "Primitives/Button",
   component: Button,
-  // tags: ["autodocs"],
   argTypes: {
     variant: {
       control: { type: "select" },
