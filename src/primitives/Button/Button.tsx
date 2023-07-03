@@ -9,19 +9,14 @@ import {
   ButtonTheme,
   ButtonVariant,
   IconButtonSize,
-  PolymorphicProps,
 } from "../types/common";
 
-export interface ButtonBasicProps
+export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Specifies if the Button element should fit the width of its parent container
    */
   fullWidth?: boolean;
-  /**
-   * Optionally render the Button element as an `<a>` element
-   */
-  href?: string;
   /**
    * Specifies the name of the icon that is rendered by the Button element
    */
@@ -56,129 +51,53 @@ export interface ButtonBasicProps
   variant?: ButtonVariant;
 }
 
-export type ButtonProps<T extends React.ElementType> = PolymorphicProps<
-  T,
-  ButtonBasicProps
->;
-
-export interface ButtonComponent {
-  <T extends React.ElementType>(
-    props: ButtonProps<T>,
-    context?: unknown
-  ): React.ReactElement<unknown, T> | null;
-}
-
 // eslint-disable-next-line
-const Button = React.forwardRef(function Button<T extends React.ElementType>(
-  {
-    as,
-    children,
-    className,
-    disabled = false,
-    fullWidth = false,
-    href,
-    iconLabel,
-    icon,
-    isIconOnly = false,
-    kind = "SOLID",
-    onBlur,
-    onClick,
-    onFocus,
-    onMouseEnter,
-    onMouseLeave,
-    rounded = "SQUARE",
-    size = "SMALL",
-    tabIndex,
-    type,
-    uppercase = false,
-    variant = "PRIMARY",
-    ...rest
-  }: ButtonProps<T>,
-  ref: React.Ref<unknown>
-) {
-  const buttonClassName = cx([
-    "inline-flex",
-    "items-center",
-    "outline-2",
-    "border-2",
-    "font-med",
-    "transition-all",
-    "outline-transparent",
-    "focus:outline-blue-500",
-    "disabled:bg-zinc-500",
-    "disabled:text-zinc-800",
-    "disabled:border-zinc-800",
+const Button = ({
+  children,
+  className,
+  disabled = false,
+  fullWidth = false,
+  iconLabel,
+  icon,
+  isIconOnly = false,
+  kind = "SOLID",
+  rounded = "SQUARE",
+  size = "SMALL",
+  uppercase = false,
+  variant = "PRIMARY",
+  ...rest
+}: ButtonProps) => {
+  const dynamicClasses = [
     fullWidth && "w-full",
-    uppercase ? "uppercase" : "",
-    isIconOnly && IconButtonSize[size],
     !isIconOnly && icon ? "justify-between" : "justify-center",
     !isIconOnly && ButtonSize[size],
+    isIconOnly && IconButtonSize[size],
     ButtonTheme[`${variant}-${kind}`],
     ButtonRadius[rounded],
     className,
-  ]);
+  ].join(" ");
 
-  const commonProps = { tabIndex, className: buttonClassName, ref };
-  const anchorProps = { href };
+  const commonProps = { disabled, className: `${dynamicClasses} Btn`, ...rest };
+  const textTransform = uppercase ? "uppercase" : "none";
 
-  let additionalProps: Partial<ButtonBasicProps> = {
-    disabled,
-    type,
-    // add aria props
-  };
+  return (
+    <button
 
-  let component: React.ElementType = "button";
-
-  if (as) {
-    component = as;
-    additionalProps = {
-      ...additionalProps,
-      ...anchorProps,
-    };
-  } else if (href && !disabled) {
-    component = "a";
-    additionalProps = anchorProps;
-  }
-
-  const ButtonIconElement = !icon ? null : (
-    <Icon
-      aria-label={iconLabel}
-      name={icon}
-      style={{
-        height: ButtonIconSize[size],
-        width: ButtonIconSize[size],
-      }}
-    />
+      style={{ textTransform }}
+      {...commonProps}
+    >
+      <span>{!isIconOnly && children}</span>
+      {!icon ? null : (
+        <Icon
+          aria-label={iconLabel}
+          name={icon}
+          style={{
+            height: ButtonIconSize[size],
+            width: ButtonIconSize[size],
+          }}
+        />
+      )}
+    </button>
   );
-
-  const Button = React.createElement(
-    component,
-    {
-      onBlur,
-      onClick,
-      onFocus,
-      onMouseEnter,
-      onMouseLeave,
-      ...rest,
-      ...commonProps,
-      ...additionalProps,
-    },
-    !isIconOnly && children,
-    ButtonIconElement
-  );
-  return Button;
-});
-
-export default Button as ButtonComponent;
-
-export const capitalizeString = (string?: string) => {
-  if (!string) return "";
-  const clean = string.toLowerCase();
-  const char = clean.charAt(0).toUpperCase();
-  return char + clean.slice(1);
 };
-
-export function cx<T>(values: T[]) {
-  if (values.length === 0) return values[0];
-  return values.join(" ").trimEnd();
-}
+export default Button;
