@@ -27,6 +27,7 @@ export const icons = [
   { name: 'INFOCIRCLED', element: <Icon name='INFOCIRCLED' /> },
   { name: 'SHARE1', element: <Icon name='SHARE1' /> },
   { name: 'TRASH', element: <Icon name='TRASH' /> },
+  { name: 'E1XICOFONT', element: <Icon name='E1XICOFONT' />}
 ]
 
 // import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';

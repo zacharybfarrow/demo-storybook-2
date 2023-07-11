@@ -1,0 +1,27 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+            }
+
+            .cls-2 {
+                clip-path: url(#clip-path);
+            }
+
+            .cls-3 {
+                fill-rule: evenodd;
+            }
+        </style>
+        <clipPath id="clip-path">
+            <rect class="cls-1" width="24" height="24" />
+        </clipPath>
+    </defs>
+    <title>E1X_ico_font</title>
+    <g id="ico_home_inactive">
+        <g class="cls-2">
+            <path class="cls-3" d="M12,4,7,8.67V7H5v3.54l-1,.93V20H20V11.47Zm7,15H13V15H11v4H5V11.91l7-6.54,7,6.54Z" />
+        </g>
+    </g>
+</svg>

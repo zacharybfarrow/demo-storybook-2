@@ -50,6 +50,7 @@ const meta = {
         "INFOCIRCLED",
         "SHARE1",
         "TRASH",
+        "E1XICOFONT"
       ],
     },
   },

@@ -17,6 +17,7 @@ import {
   Share1Icon,
   TrashIcon,
 } from "@radix-ui/react-icons";
+import { E1XIcoFont } from "./lib";
 
 export type IconName =
   | "ARROWBOTTOMLEFT"
@@ -34,7 +35,8 @@ export type IconName =
   | "EXTERNALLINK"
   | "INFOCIRCLED"
   | "SHARE1"
-  | "TRASH";
+  | "TRASH"
+  | "E1XICOFONT";
 
 export default function Icon<T extends IconProps>({
   name,
@@ -58,6 +60,7 @@ export default function Icon<T extends IconProps>({
     INFOCIRCLED: <InfoCircledIcon {...props} />,
     SHARE1: <Share1Icon {...props} />,
     TRASH: <TrashIcon {...props} />,
+    E1XICOFONT: <E1XIcoFont {...props} />
   };
   return iconLookup[name] ?? null;
 }
