@@ -1,3 +1,7 @@
+svg {
+    pointer-events: none;
+}
+
 .icon-tooltip {
     position: relative;
 }

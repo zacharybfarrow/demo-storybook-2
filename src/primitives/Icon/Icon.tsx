@@ -10,5 +10,13 @@ export default function Icon<T extends IconProps, P = SVGRProps>({
   const IconComponent = ICONLOOKUP.get(name);
   if (!IconComponent) return null;
   const { svgProps, ...restProps } = props;
-  return <IconComponent {...svgProps} {...restProps} color="#2563eb" />;
+  return (
+    <IconComponent
+      {...svgProps}
+      {...restProps}
+      color="#2563eb"
+      title="accessibility title"
+      desc="accessibility description"
+    />
+  );
 }
