@@ -1,6 +1,7 @@
 import { type StoryObj } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import Button from "./Button";
+import { ICONLOOKUP } from "../Icon/iconTypes";
 
 const meta = {
   title: "Primitives/Button",
@@ -33,6 +34,7 @@ const meta = {
     disabled: { control: { type: "boolean", default: false } },
     icon: {
       control: { type: "select" },
+      options: Array.from(ICONLOOKUP.keys()),
     },
   },
 };
@@ -192,7 +194,7 @@ export const Variants = ({ ...args }: Story) => {
 export const IconVariants = ({ ...args }: Story) => {
   const commonArgs = {
     onClick: action("onClick"),
-    icon: "ARROWRIGHT",
+    icon: "E1XIcoFont06",
     kind: "OUTLINE",
     ...args,
   } as Story;

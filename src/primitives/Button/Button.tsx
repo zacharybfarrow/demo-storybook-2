@@ -90,7 +90,7 @@ const Button = ({
       <span>{!isIconOnly && children}</span>
       {!icon ? null : (
         <Icon
-          aria-label={iconLabel}
+          title={iconLabel}
           name={icon}
           style={{
             height: ButtonIconSize[size],
