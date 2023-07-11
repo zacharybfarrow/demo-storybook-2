@@ -1,16 +1,17 @@
 import { Meta, IconGallery, IconItem } from "@storybook/blocks";
-import { icons } from "../atoms/atoms.tsx";
+import { ICONLOOKUP } from "../primitives/Icon/iconTypes.tsx";
 
 <Meta title="Atoms/Icons" />
 
 # Icons
 
 <IconGallery>
-  {icons.map((icon) => {
+  {Array.from(ICONLOOKUP.keys()).map((icon) => {
+    const IconComponent = ICONLOOKUP.get(icon);
     return (
-        <IconItem key={icon.title} name={icon.name}>
-            {icon.element}
-        </IconItem>
-    )
+      <IconItem key={icon} name={icon}>
+        <IconComponent />
+      </IconItem>
+    );
   })}
 </IconGallery>

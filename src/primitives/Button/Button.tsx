@@ -1,5 +1,5 @@
 import React from "react";
-import Icon, { IconName } from "../Icon/Icon";
+import Icon from "../Icon/Icon";
 
 import {
   ButtonIconSize,
@@ -10,6 +10,7 @@ import {
   ButtonVariant,
   IconButtonSize,
 } from "../types/common";
+import { IconName } from "../Icon/iconTypes";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {

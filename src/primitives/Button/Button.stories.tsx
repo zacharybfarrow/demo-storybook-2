@@ -33,25 +33,6 @@ const meta = {
     disabled: { control: { type: "boolean", default: false } },
     icon: {
       control: { type: "select" },
-      options: [
-        "ARROWBOTTOMLEFT",
-        "ARROWBOTTOMRIGHT",
-        "ARROWDOWN",
-        "ARROWLEFT",
-        "ARROWRIGHT",
-        "ARROWTOPLEFT",
-        "ARROWTOPRIGHT",
-        "ARROWUP",
-        "AVATAR",
-        "CHECKCIRCLED",
-        "CROSSCIRCLED",
-        "EXCLAMATIONTRIANGLE",
-        "EXTERNALLINK",
-        "INFOCIRCLED",
-        "SHARE1",
-        "TRASH",
-        "E1XICOFONT"
-      ],
     },
   },
 };
@@ -248,22 +229,22 @@ export const IconOnlyVariants = ({ ...args }: Story) => {
   } as Story;
   return (
     <div className="flex flex-wrap max-w-full gap-1">
-      <Button {...commonArgs} icon="INFOCIRCLED" variant="PRIMARY">
+      <Button {...commonArgs} icon="E1XIcoFont" variant="PRIMARY">
         PRIMARY
       </Button>
-      <Button {...commonArgs} icon="SHARE1" variant="ACTION">
+      <Button {...commonArgs} icon="E1XIcoFont01" variant="ACTION">
         ACTION
       </Button>
-      <Button {...commonArgs} icon="AVATAR" variant="ACCENT">
+      <Button {...commonArgs} icon="E1XIcoFont02" variant="ACCENT">
         ACCENT
       </Button>
-      <Button {...commonArgs} icon="TRASH" variant="DANGER">
+      <Button {...commonArgs} icon="E1XIcoFont03" variant="DANGER">
         DANGER
       </Button>
-      <Button {...commonArgs} icon="CHECKCIRCLED" variant="SUCCESS">
+      <Button {...commonArgs} icon="E1XIcoFont04" variant="SUCCESS">
         SUCCESS
       </Button>
-      <Button {...commonArgs} icon="EXCLAMATIONTRIANGLE" variant="WARNING">
+      <Button {...commonArgs} icon="E1XIcoFont05" variant="WARNING">
         WARNING
       </Button>
     </div>
