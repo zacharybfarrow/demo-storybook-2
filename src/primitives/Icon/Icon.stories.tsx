@@ -29,9 +29,6 @@ const meta = {
     width: {
       control: { type: "text" },
     },
-    viewBox: {
-      control: { type: "text" },
-    },
     title: {
       control: { type: "text" },
     },
@@ -48,6 +45,11 @@ const meta = {
       control: { type: "boolean", defaultValue: false },
     },
     svgProps: {
+      table: {
+        disable: true,
+      },
+    },
+    viewBox: {
       table: {
         disable: true,
       },
