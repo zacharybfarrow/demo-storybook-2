@@ -27,7 +27,10 @@ const meta = {
       },
     },
     width: {
-      control: { type: "text", defaultValue: { summary: "1em" } },
+      control: { type: "text" },
+    },
+    viewBox: {
+      control: { type: "text" },
     },
     title: {
       control: { type: "text" },
@@ -61,6 +64,7 @@ export const Default: Story = {
     fill: "#09090b",
     height: "3em",
     width: "3em",
+    viewBox: "0 0 24 24",
     title: "accessibility title",
     titleId: "ariaTitle",
     desc: "accessbility description",

@@ -10,7 +10,7 @@ import { ICONLOOKUP } from "../primitives/Icon/iconTypes.tsx";
     const IconComponent = ICONLOOKUP.get(icon);
     return (
       <IconItem key={icon} name={icon}>
-        <IconComponent />
+        <IconComponent title={icon} tooltip />
       </IconItem>
     );
   })}

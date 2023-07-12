@@ -16,6 +16,7 @@ const SvgE1XIcoFont = (
     xmlns="http://www.w3.org/2000/svg"
     width={props.width}
     height={props.height}
+    viewBox="0 0 24 24"
     className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}
     ref={ref}
     aria-labelledby={titleId}

@@ -17,6 +17,7 @@ const SvgE1XIcoFont07 = (
     width={props.width}
     height={props.height}
     data-name="Layer 1"
+    viewBox="0 0 24 24"
     className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}
     ref={ref}
     aria-labelledby={titleId}
