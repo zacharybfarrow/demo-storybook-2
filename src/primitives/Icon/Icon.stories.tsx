@@ -58,17 +58,29 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Icon>;
 
+const commonArgs = {
+  fill: "#09090b",
+  height: "10em",
+  width: "10em",
+  viewBox: "0 0 24 24",
+  title: "accessibility title",
+  titleId: "ariaTitle",
+  desc: "accessbility description",
+  descId: "ariaDesc",
+};
+
 export const Default: Story = {
   args: {
+    ...commonArgs,
     name: "E1XIcoFont01",
-    fill: "#09090b",
-    height: "3em",
-    width: "3em",
-    viewBox: "0 0 24 24",
-    title: "accessibility title",
-    titleId: "ariaTitle",
-    desc: "accessbility description",
-    descId: "ariaDesc",
     tooltip: false,
+  },
+};
+
+export const WithTooltip: Story = {
+  args: {
+    ...commonArgs,
+    name: "E1XIcoFont01",
+    tooltip: true,
   },
 };
