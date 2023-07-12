@@ -2,7 +2,6 @@ function svgrTemplate(variables, { tpl }) {
 
     return tpl`
     ${variables.imports};
-    import '../Icon.css';
     import { SVGRProps } from "../../iconTypes";
 
     const ${variables.componentName} = (${variables.props}) => (

@@ -27,10 +27,6 @@ export interface SVGRProps {
    * Specifies whether or not a tooltip should be applied to the icon on mouseover. Defaults to false.
    */
   tooltip?: boolean;
-  /**
-   * Specifies the text to be displayed in the tooltip. If no text is provided, the tooltip will display the title and the desc.
-   */
-  tooltipText?: string;
 }
 
 export type PrimitiveIconName = keyof typeof primitiveIcons;

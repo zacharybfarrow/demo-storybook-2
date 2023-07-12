@@ -1,7 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
 import { Ref, forwardRef } from "react";
-import "../Icon.css";
 import { SVGRProps } from "../../iconTypes";
 const SvgE1XIcoFont05 = (
   {
@@ -18,10 +17,9 @@ const SvgE1XIcoFont05 = (
     id="E1X_ico_font-05_svg__Layer_1"
     data-name="Layer 1"
     viewBox="0 0 24 24"
-    width="1em"
-    height="1em"
-    fill={props.color}
-    data-tooltip={props.tooltipText ? props.tooltipText : desc}
+    height={props.height}
+    width={props.width}
+    className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}
     ref={ref}
     aria-labelledby={titleId}
     aria-describedby={descId}
