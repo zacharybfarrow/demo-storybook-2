@@ -10,7 +10,11 @@ export default function Icon<
   return (
     <IconComponent
       {...props}
-      style={props.bgColor ? { backgroundColor: props.bgColor } : undefined}
+      style={
+        props.backgroundColor
+          ? { backgroundColor: props.backgroundColor }
+          : undefined
+      }
     />
   );
 }

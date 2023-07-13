@@ -30,7 +30,7 @@ export interface SVGRProps {
   /**
    * Specifieds the background color for the icon, they are transparent by default.
    */
-  bgColor?: string;
+  backgroundColor?: string;
 }
 
 export type PrimitiveIconName = keyof typeof primitiveIcons;
