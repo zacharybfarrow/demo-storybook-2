@@ -27,6 +27,10 @@ export interface SVGRProps {
    * Specifies whether or not a tooltip should be applied to the icon on mouseover. Defaults to false.
    */
   tooltip?: boolean;
+  /**
+   * Specifieds the background color for the icon, they are transparent by default.
+   */
+  bgColor?: string;
 }
 
 export type PrimitiveIconName = keyof typeof primitiveIcons;

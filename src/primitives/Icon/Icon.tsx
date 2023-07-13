@@ -7,5 +7,10 @@ export default function Icon<
   if (!name) return null;
   const IconComponent = ICONLOOKUP.get(name);
   if (!IconComponent) return null;
-  return <IconComponent {...props} />;
+  return (
+    <IconComponent
+      {...props}
+      style={props.bgColor ? { backgroundColor: props.bgColor } : undefined}
+    />
+  );
 }

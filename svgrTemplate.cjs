@@ -1,6 +1,5 @@
 function svgrTemplate(variables, { tpl }) {
-
-    return tpl`
+  return tpl`
     ${variables.imports};
     import { SVGRProps } from "../../iconTypes";
 
@@ -9,9 +8,8 @@ function svgrTemplate(variables, { tpl }) {
     );
 
     ${variables.exports};
-    `
-
+    `;
 }
 
 /* eslint-disable no-undef */
-module.exports = svgrTemplate
+module.exports = svgrTemplate;

@@ -8,6 +8,16 @@ export const colors = [
   { title: "Warning", value: "#f97316" },
 ];
 
+export enum MainColors {
+  PRIMARY = "#09090b",
+  SECONDARY = "#fafafa",
+  ACTION = "#2563eb",
+  ACCENT = "#facc15",
+  DANGER = "#dc2626",
+  SUCCESS = "#16a34a",
+  WARNING = "#f97316",
+}
+
 // import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
 // import themeConfig from "../../tailwind.config.js"
 // <Meta title="Atoms/Colors" />

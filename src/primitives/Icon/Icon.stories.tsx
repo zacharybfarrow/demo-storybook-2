@@ -2,23 +2,38 @@ import { type StoryObj } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import Icon from "./Icon";
 import { ICONLOOKUP, SVGRProps, IconName } from "./iconTypes";
+import { MainColors } from "../../atoms/atoms";
+
+const presetColors = [
+  { title: "Primary", color: MainColors["PRIMARY"] },
+  { title: "Secondary", color: MainColors["SECONDARY"] },
+  { title: "Action", color: MainColors["ACTION"] },
+  { title: "Accent", color: MainColors["ACCENT"] },
+  { title: "Danger", color: MainColors["DANGER"] },
+  { title: "Success", color: MainColors["SUCCESS"] },
+  { title: "Warning", color: MainColors["WARNING"] },
+];
 
 const meta = {
   title: "Primitives/Icon",
   component: Icon,
   argTypes: {
+    name: {
+      control: {
+        type: "select",
+        options: Array.from(ICONLOOKUP.keys()),
+      },
+    },
     fill: {
       control: {
         type: "color",
-        presetColors: [
-          { title: "Primary", color: "#09090b" },
-          { title: "Secondary", color: "#fafafa" },
-          { title: "Action", color: "#2563eb" },
-          { title: "Accent", color: "#facc15" },
-          { title: "Danger", color: "#dc2626" },
-          { title: "Success", color: "#16a34a" },
-          { title: "Warning", color: "#f97316" },
-        ],
+        presetColors: [...presetColors],
+      },
+    },
+    bgColor: {
+      control: {
+        type: "color",
+        presetColors: [...presetColors],
       },
     },
     height: {
@@ -85,4 +100,39 @@ export const WithTooltip: Story = {
     name: "E1XIcoFont01",
     tooltip: true,
   },
+};
+
+export const Colors = ({ ...args }: Story) => {
+  return (
+    <div className="flex flex-wrap max-w-full gap-1 flex-row">
+      <Icon
+        {...commonArgs}
+        name="E1XIcoFont10"
+        bgColor={MainColors["PRIMARY"]}
+        fill={MainColors["SECONDARY"]}
+      />
+      <Icon
+        {...commonArgs}
+        name="TruIcon129"
+        bgColor={MainColors["ACTION"]}
+        fill={MainColors["SECONDARY"]}
+      />
+      <Icon
+        {...commonArgs}
+        name="TruIcon01"
+        bgColor={MainColors["SUCCESS"]}
+        fill={MainColors["SECONDARY"]}
+      />
+      <Icon {...commonArgs} name="SvgExports339" fill={MainColors["DANGER"]} />
+      <Icon {...commonArgs} name="TruIcon13" bgColor={MainColors["WARNING"]} />
+      <Icon
+        {...commonArgs}
+        name="E1XIcoFont299"
+        bgColor={MainColors["ACCENT"]}
+        fill={MainColors["ACTION"]}
+      />
+      <Icon {...commonArgs} name="E1XIcoFont132" fill={MainColors["ACTION"]} />
+      <Icon {...commonArgs} name="E1XIcoFont399" />
+    </div>
+  ) as Story;
 };
