@@ -30,7 +30,7 @@ const meta = {
         presetColors: [...presetColors],
       },
     },
-    bgColor: {
+    backgroundColor: {
       control: {
         type: "color",
         presetColors: [...presetColors],
@@ -108,27 +108,31 @@ export const Colors = ({ ...args }: Story) => {
       <Icon
         {...commonArgs}
         name="E1XIcoFont10"
-        bgColor={MainColors["PRIMARY"]}
+        backgroundColor={MainColors["PRIMARY"]}
         fill={MainColors["SECONDARY"]}
       />
       <Icon
         {...commonArgs}
         name="TruIcon129"
-        bgColor={MainColors["ACTION"]}
+        backgroundColor={MainColors["ACTION"]}
         fill={MainColors["SECONDARY"]}
       />
       <Icon
         {...commonArgs}
         name="TruIcon01"
-        bgColor={MainColors["SUCCESS"]}
+        backgroundColor={MainColors["SUCCESS"]}
         fill={MainColors["SECONDARY"]}
       />
       <Icon {...commonArgs} name="SvgExports339" fill={MainColors["DANGER"]} />
-      <Icon {...commonArgs} name="TruIcon13" bgColor={MainColors["WARNING"]} />
+      <Icon
+        {...commonArgs}
+        name="TruIcon13"
+        backgroundColor={MainColors["WARNING"]}
+      />
       <Icon
         {...commonArgs}
         name="E1XIcoFont299"
-        bgColor={MainColors["ACCENT"]}
+        backgroundColor={MainColors["ACCENT"]}
         fill={MainColors["ACTION"]}
       />
       <Icon {...commonArgs} name="E1XIcoFont132" fill={MainColors["ACTION"]} />
