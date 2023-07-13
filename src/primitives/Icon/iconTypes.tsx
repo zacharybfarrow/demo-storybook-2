@@ -38,6 +38,7 @@ export type PrimitiveIconName = keyof typeof primitiveIcons;
 
 export type IconName = PrimitiveIconName; //& StackedIconNames
 
+// eslint-disable-next-line
 export const ICONLOOKUP = new Map<
   string,
   React.ForwardRefExoticComponent<

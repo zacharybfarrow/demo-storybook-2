@@ -1,7 +1,6 @@
 import { type StoryObj } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
 import Icon from "./Icon";
-import { ICONLOOKUP, SVGRProps, IconName } from "./iconTypes";
+import { ICONLOOKUP } from "./iconTypes";
 import { MainColors } from "../../atoms/atoms";
 
 const presetColors = [
@@ -106,37 +105,52 @@ export const Colors = ({ ...args }: Story) => {
   return (
     <div className="flex flex-wrap max-w-full gap-1 flex-row">
       <Icon
+        {...args}
         {...commonArgs}
         name="E1XIcoFont10"
         backgroundColor={MainColors["PRIMARY"]}
         fill={MainColors["SECONDARY"]}
       />
       <Icon
+        {...args}
         {...commonArgs}
         name="TruIcon129"
         backgroundColor={MainColors["ACTION"]}
         fill={MainColors["SECONDARY"]}
       />
       <Icon
+        {...args}
         {...commonArgs}
         name="TruIcon01"
         backgroundColor={MainColors["SUCCESS"]}
         fill={MainColors["SECONDARY"]}
       />
-      <Icon {...commonArgs} name="SvgExports339" fill={MainColors["DANGER"]} />
       <Icon
+        {...args}
+        {...commonArgs}
+        name="SvgExports339"
+        fill={MainColors["DANGER"]}
+      />
+      <Icon
+        {...args}
         {...commonArgs}
         name="TruIcon13"
         backgroundColor={MainColors["WARNING"]}
       />
       <Icon
+        {...args}
         {...commonArgs}
         name="E1XIcoFont299"
         backgroundColor={MainColors["ACCENT"]}
         fill={MainColors["ACTION"]}
       />
-      <Icon {...commonArgs} name="E1XIcoFont132" fill={MainColors["ACTION"]} />
-      <Icon {...commonArgs} name="E1XIcoFont399" />
+      <Icon
+        {...args}
+        {...commonArgs}
+        name="E1XIcoFont132"
+        fill={MainColors["ACTION"]}
+      />
+      <Icon {...args} {...commonArgs} name="E1XIcoFont399" />
     </div>
   ) as Story;
 };
