@@ -15,6 +15,7 @@ const SvgMaskedIconsFonts87 = (
     xmlns="http://www.w3.org/2000/svg"
     data-name="Layer 1"
     viewBox="0 0 24 24"
+    role="img"
     width={props.width}
     height={props.height}
     className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}
@@ -27,10 +28,8 @@ const SvgMaskedIconsFonts87 = (
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       d="m20.23 14.95-2.19 2.18 2.19 2.19-.73.73-2.19-2.19-2.18 2.19-.73-.73 2.19-2.19-2.19-2.18.73-.73 2.18 2.18 2.19-2.18.73.73z"
-      style={{
-        fill: "#231f20",
-        fillRule: "evenodd",
-      }}
+      fill="#231f20"
+      fillRule="evenodd"
     />
   </svg>
 );

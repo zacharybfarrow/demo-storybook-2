@@ -15,6 +15,7 @@ const SvgMaskedIconsFonts120 = (
     xmlns="http://www.w3.org/2000/svg"
     data-name="Layer 1"
     viewBox="0 0 24 24"
+    role="img"
     width={props.width}
     height={props.height}
     className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}
@@ -25,12 +26,7 @@ const SvgMaskedIconsFonts120 = (
   >
     {desc ? <desc id={descId}>{desc}</desc> : null}
     {title ? <title id={titleId}>{title}</title> : null}
-    <path
-      d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"
-      style={{
-        fill: "#231f20",
-      }}
-    />
+    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z" fill="#231f20" />
   </svg>
 );
 const ForwardRef = forwardRef(SvgMaskedIconsFonts120);

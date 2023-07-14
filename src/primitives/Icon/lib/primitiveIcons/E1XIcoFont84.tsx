@@ -14,6 +14,7 @@ const SvgE1XIcoFont84 = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    role="img"
     width={props.width}
     height={props.height}
     className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}

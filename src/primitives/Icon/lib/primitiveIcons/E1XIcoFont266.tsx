@@ -15,6 +15,7 @@ const SvgE1XIcoFont266 = (
     xmlns="http://www.w3.org/2000/svg"
     data-name="Layer 1"
     viewBox="0 0 24 24"
+    role="img"
     width={props.width}
     height={props.height}
     className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}
@@ -25,12 +26,7 @@ const SvgE1XIcoFont266 = (
   >
     {desc ? <desc id={descId}>{desc}</desc> : null}
     {title ? <title id={titleId}>{title}</title> : null}
-    <path
-      d="M12 8a4 4 0 1 0 4 4 4 4 0 0 0-4-4"
-      style={{
-        fillRule: "evenodd",
-      }}
-    />
+    <path d="M12 8a4 4 0 1 0 4 4 4 4 0 0 0-4-4" fillRule="evenodd" />
   </svg>
 );
 const ForwardRef = forwardRef(SvgE1XIcoFont266);

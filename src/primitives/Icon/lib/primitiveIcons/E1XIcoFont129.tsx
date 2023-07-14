@@ -15,6 +15,7 @@ const SvgE1XIcoFont129 = (
     xmlns="http://www.w3.org/2000/svg"
     data-name="Layer 1"
     viewBox="0 0 24 24"
+    role="img"
     width={props.width}
     height={props.height}
     className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}
@@ -25,12 +26,7 @@ const SvgE1XIcoFont129 = (
   >
     {desc ? <desc id={descId}>{desc}</desc> : null}
     {title ? <title id={titleId}>{title}</title> : null}
-    <path
-      d="M1.44 1.44h21.12v21.12H1.44z"
-      style={{
-        fill: "none",
-      }}
-    />
+    <path d="M1.44 1.44h21.12v21.12H1.44z" fill="none" />
     <path d="M11 10.61h5.84v3.66H11Zm0 6.47h5.84v3.67H11Zm2-9.29H7.11V4.13H13Z" />
   </svg>
 );

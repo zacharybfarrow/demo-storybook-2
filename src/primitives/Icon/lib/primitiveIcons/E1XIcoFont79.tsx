@@ -15,6 +15,7 @@ const SvgE1XIcoFont79 = (
     xmlns="http://www.w3.org/2000/svg"
     data-name="Layer 1"
     viewBox="0 0 24 24"
+    role="img"
     width={props.width}
     height={props.height}
     className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}
@@ -25,18 +26,8 @@ const SvgE1XIcoFont79 = (
   >
     {desc ? <desc id={descId}>{desc}</desc> : null}
     {title ? <title id={titleId}>{title}</title> : null}
-    <path
-      d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2"
-      style={{
-        fillRule: "evenodd",
-      }}
-    />
-    <path
-      d="M0 0h24v24H0z"
-      style={{
-        fill: "none",
-      }}
-    />
+    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2" fillRule="evenodd" />
+    <path d="M0 0h24v24H0z" fill="none" />
   </svg>
 );
 const ForwardRef = forwardRef(SvgE1XIcoFont79);

@@ -13,9 +13,10 @@ const SvgE1XIcoFont39 = (
 ) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    id="E1X_ico_font-39_svg__Layer_1"
+    id="Layer_1"
     data-name="Layer 1"
     viewBox="0 0 24 24"
+    role="img"
     width={props.width}
     height={props.height}
     className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}
@@ -27,30 +28,16 @@ const SvgE1XIcoFont39 = (
     {desc ? <desc id={descId}>{desc}</desc> : null}
     {title ? <title id={titleId}>{title}</title> : null}
     <defs>
-      <clipPath id="E1X_ico_font-39_svg__clip-path">
-        <path
-          d="M0 0h24v24H0z"
-          style={{
-            fill: "none",
-          }}
-        />
+      <clipPath id="clip-path">
+        <path d="M0 0h24v24H0z" fill="none" />
       </clipPath>
-      <style>
-        {
-          ".E1X_ico_font-39_svg__cls-2{clip-path:url(#E1X_ico_font-39_svg__clip-path)}"
-        }
-      </style>
+      <style>{".cls-2{clip-path:url(#clip-path)}"}</style>
     </defs>
-    <g
-      id="E1X_ico_font-39_svg__ico_menu_more_horizontal"
-      className="E1X_ico_font-39_svg__cls-2"
-    >
+    <g id="ico_menu_more_horizontal" className="cls-2">
       <path
         d="M12 10a2 2 0 1 0 2 2 2 2 0 0 0-2-2m6 0a2 2 0 1 0 2 2 2 2 0 0 0-2-2M6 10a2 2 0 1 0 2 2 2 2 0 0 0-2-2"
-        className="E1X_ico_font-39_svg__cls-2"
-        style={{
-          fillRule: "evenodd",
-        }}
+        className="cls-2"
+        fillRule="evenodd"
       />
     </g>
   </svg>

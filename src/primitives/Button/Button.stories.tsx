@@ -194,7 +194,7 @@ export const Variants = ({ ...args }: Story) => {
 export const IconVariants = ({ ...args }: Story) => {
   const commonArgs = {
     onClick: action("onClick"),
-    icon: "E1XIcoFont06",
+    icon: "TruIcon72",
     kind: "OUTLINE",
     ...args,
   } as Story;

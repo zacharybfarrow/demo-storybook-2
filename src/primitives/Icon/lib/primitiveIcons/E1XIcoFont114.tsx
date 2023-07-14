@@ -15,6 +15,7 @@ const SvgE1XIcoFont114 = (
     xmlns="http://www.w3.org/2000/svg"
     data-name="Layer 1"
     viewBox="0 0 24 24"
+    role="img"
     width={props.width}
     height={props.height}
     className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}
@@ -26,20 +27,13 @@ const SvgE1XIcoFont114 = (
     {desc ? <desc id={descId}>{desc}</desc> : null}
     {title ? <title id={titleId}>{title}</title> : null}
     <defs>
-      <clipPath id="E1X_ico_font-114_svg__a">
-        <path
-          d="M0 0h24v24H0z"
-          style={{
-            fill: "none",
-          }}
-        />
+      <clipPath id="a">
+        <path d="M0 0h24v24H0z" fill="none" />
       </clipPath>
     </defs>
     <path
       d="M11 22h11v-6H11Zm-9 0h8V8H2Zm9-7h11V8H11ZM2 2v5h20V2Z"
-      style={{
-        clipPath: "url(#E1X_ico_font-114_svg__a)",
-      }}
+      clipPath="url(#a)"
     />
   </svg>
 );

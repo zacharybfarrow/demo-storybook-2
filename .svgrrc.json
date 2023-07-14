@@ -1,0 +1,14 @@
+{
+  "svgoConfig": {
+    "plugins": [
+      "preset-default",
+      "convertStyleToAttrs",
+      {
+        "name": "addAttributesToSVGElement",
+        "params": {
+          "attributes": [{ "viewBox": "0 0 24 24" }, { "role": "img" }]
+        }
+      }
+    ]
+  }
+}

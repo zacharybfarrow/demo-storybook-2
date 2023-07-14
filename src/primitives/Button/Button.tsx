@@ -82,20 +82,14 @@ const Button = ({
   const textTransform = uppercase ? "uppercase" : "none";
 
   return (
-    <button
-
-      style={{ textTransform }}
-      {...commonProps}
-    >
+    <button style={{ textTransform }} {...commonProps}>
       <span>{!isIconOnly && children}</span>
       {!icon ? null : (
         <Icon
           title={iconLabel}
           name={icon}
-          style={{
-            height: ButtonIconSize[size],
-            width: ButtonIconSize[size],
-          }}
+          height={ButtonIconSize[size]}
+          width={ButtonIconSize[size]}
         />
       )}
     </button>

@@ -15,6 +15,7 @@ const SvgE1XIcoFont122 = (
     xmlns="http://www.w3.org/2000/svg"
     data-name="Layer 1"
     viewBox="0 0 24 24"
+    role="img"
     width={props.width}
     height={props.height}
     className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}
@@ -25,12 +26,7 @@ const SvgE1XIcoFont122 = (
   >
     {desc ? <desc id={descId}>{desc}</desc> : null}
     {title ? <title id={titleId}>{title}</title> : null}
-    <path
-      d="M1.44 1.44h21.12v21.12H1.44z"
-      style={{
-        fill: "none",
-      }}
-    />
+    <path d="M1.44 1.44h21.12v21.12H1.44z" fill="none" />
     <path d="M10.72 7.77V3a.13.13 0 0 0-.13-.13h-3L7.21 2a.11.11 0 0 0-.11 0H4a.11.11 0 0 0-.07 0l-.44.87v4.8a.13.13 0 0 0 .13.13h7a.13.13 0 0 0 .1-.03ZM10 7.2H4.17V3.54H10Zm4.5 2.12h-3l-.4-.8a.12.12 0 0 0-.1-.07H8a.12.12 0 0 0-.12.07l-.44.87v4.86a.13.13 0 0 0 .13.13h3.23a4.13 4.13 0 0 1 .14-.7H8.1V10h5.84v.91a4.17 4.17 0 0 1 .71-.07V9.45a.13.13 0 0 0-.13-.13Zm-.58 10.84H8.1V16.5h3a3.8 3.8 0 0 1-.4-1.57H8a.12.12 0 0 0-.12.07l-.44.87v4.86a.13.13 0 0 0 .13.13h7a.13.13 0 0 0 .13-.13v-2a4.17 4.17 0 0 1-.71-.07Z" />
   </svg>
 );

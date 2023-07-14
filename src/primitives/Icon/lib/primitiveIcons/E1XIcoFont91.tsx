@@ -13,9 +13,10 @@ const SvgE1XIcoFont91 = (
 ) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    id="E1X_ico_font-91_svg__Layer_1"
+    id="Layer_1"
     data-name="Layer 1"
     viewBox="0 0 24 24"
+    role="img"
     width={props.width}
     height={props.height}
     className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}
@@ -27,11 +28,11 @@ const SvgE1XIcoFont91 = (
     {desc ? <desc id={descId}>{desc}</desc> : null}
     {title ? <title id={titleId}>{title}</title> : null}
     <defs>
-      <style>{".E1X_ico_font-91_svg__cls-1{fill-rule:evenodd}"}</style>
+      <style>{".cls-1{fill-rule:evenodd}"}</style>
     </defs>
     <path
       d="M15.65 15.44 19.08 12l-3.43-3.44L16.7 7.5l4.5 4.5-4.5 4.5-1.05-1.06zM8.35 8.56 4.92 12l3.43 3.44-1.06 1.06-4.5-4.5 4.5-4.5 1.06 1.06z"
-      className="E1X_ico_font-91_svg__cls-1"
+      className="cls-1"
     />
     <path d="m8.526 19.727 5.526-15.96 1.418.49-5.527 15.961z" />
   </svg>

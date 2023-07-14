@@ -16,6 +16,7 @@ const SvgMaskedIconsFonts125 = (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     data-name="Layer 1"
     viewBox="0 0 24 24"
+    role="img"
     width={props.width}
     height={props.height}
     className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}
@@ -27,13 +28,8 @@ const SvgMaskedIconsFonts125 = (
     {desc ? <desc id={descId}>{desc}</desc> : null}
     {title ? <title id={titleId}>{title}</title> : null}
     <defs>
-      <clipPath id="masked_icons_fonts-125_svg__a">
-        <path
-          d="M122.2 57.85h145.24v209.83H122.2z"
-          style={{
-            fill: "none",
-          }}
-        />
+      <clipPath id="a">
+        <path d="M122.2 57.85h145.24v209.83H122.2z" fill="none" />
       </clipPath>
     </defs>
     <path d="m18.02 18.76-2.01-2.01-.8.79 2.81 2.81 5.07-5.06-.8-.8-4.27 4.27z" />
@@ -42,10 +38,8 @@ const SvgMaskedIconsFonts125 = (
       width={813}
       height={685}
       data-name="Layer 0"
-      style={{
-        clipPath: "url(#masked_icons_fonts-125_svg__a)",
-      }}
       transform="translate(-294.68 -386.87)"
+      clipPath="url(#a)"
     />
   </svg>
 );

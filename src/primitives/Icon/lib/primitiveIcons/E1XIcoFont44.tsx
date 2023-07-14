@@ -13,9 +13,10 @@ const SvgE1XIcoFont44 = (
 ) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    id="E1X_ico_font-44_svg__Layer_1"
+    id="Layer_1"
     data-name="Layer 1"
     viewBox="0 0 24 24"
+    role="img"
     width={props.width}
     height={props.height}
     className={!props.tooltip ? "pointer-events-none" : "pointer-events-auto"}
@@ -27,28 +28,15 @@ const SvgE1XIcoFont44 = (
     {desc ? <desc id={descId}>{desc}</desc> : null}
     {title ? <title id={titleId}>{title}</title> : null}
     <defs>
-      <clipPath id="E1X_ico_font-44_svg__clip-path">
-        <path
-          d="M0 0h24v24H0z"
-          style={{
-            fill: "none",
-          }}
-        />
+      <clipPath id="clip-path">
+        <path d="M0 0h24v24H0z" fill="none" />
       </clipPath>
-      <style>
-        {
-          ".E1X_ico_font-44_svg__cls-2{clip-path:url(#E1X_ico_font-44_svg__clip-path)}"
-        }
-      </style>
+      <style>{".cls-2{clip-path:url(#clip-path)}"}</style>
     </defs>
-    <g
-      id="E1X_ico_font-44_svg__ico_circle__"
-      className="E1X_ico_font-44_svg__cls-2"
-      data-name="ico_circle_!"
-    >
+    <g id="ico_circle__" className="cls-2" data-name="ico_circle_!">
       <path
         d="M12 4.5a7.5 7.5 0 1 0 7.5 7.5A7.5 7.5 0 0 0 12 4.5m.75 11.25h-1.5v-1.5h1.5Zm0-3h-1.5v-4.5h1.5Z"
-        className="E1X_ico_font-44_svg__cls-2"
+        className="cls-2"
       />
     </g>
   </svg>
