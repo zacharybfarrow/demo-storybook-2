@@ -36,3 +36,53 @@ describe("renders proper html elements", function () {
     expect(descElement.tagName).toBe("desc");
   });
 });
+
+describe("correct attributes are applied", function () {
+  test("default viewbox style is set to '0 0 24 24'", async () => {
+    render(<Icon name="E1XIcoFont" />);
+
+    const icon = await screen.getByRole("img");
+
+    expect(icon.getAttribute("viewBox")).toBe("0 0 24 24");
+  });
+
+  test("role is set to 'img'", async () => {
+    render(<Icon name="E1XIcoFont" data-testid="test" />);
+
+    const icon = await screen.getByTestId("test");
+
+    expect(icon.getAttribute("role")).toBe("img");
+  });
+
+  test("svg height attr is set by props", async () => {
+    render(<Icon name="E1XIcoFont" height="1em" />);
+
+    const icon = await screen.getByRole("img");
+
+    expect(icon.getAttribute("height")).toBe("1em");
+  });
+
+  test("svg width attr is set by props", async () => {
+    render(<Icon name="E1XIcoFont" width="1em" />);
+
+    const icon = await screen.getByRole("img");
+
+    expect(icon.getAttribute("width")).toBe("1em");
+  });
+
+  test("tooltip is disabled by default", async () => {
+    render(<Icon name="E1XIcoFont" />);
+
+    const icon = await screen.getByRole("img");
+
+    expect(icon.classList).toContain("pointer-events-none");
+  });
+
+  test("tooltip is enabled by tooltip prop", async () => {
+    render(<Icon name="E1XIcoFont" tooltip />);
+
+    const icon = await screen.getByRole("img");
+
+    expect(icon.classList).toContain("pointer-events-auto");
+  });
+});
